@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Minimal nib: a simple tilted diamond -->
+  <rect x="10" y="2" width="12" height="22" rx="2" transform="rotate(15 16 16)" fill="#e8734a"/>
+  <polygon points="13,26 16,32 19,26" transform="rotate(15 16 16)" fill="#d45f38"/>
+</svg>

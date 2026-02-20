@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- Abstract quill slash  single elegant stroke -->
+  <path d="M24 3 C20 8 12 20 8 29" stroke="#e8734a" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <circle cx="8" cy="29" r="2" fill="#e8734a"/>
+</svg>
