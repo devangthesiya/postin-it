@@ -3,53 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="path-depth" content="0">
   <meta name="description" content="Musing — Thinking out loud.">
   <meta property="og:title" content="Musing">
   <meta property="og:description" content="A personal space for essays, short notes, and everything in between.">
   <meta property="og:type" content="website">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <title>Musing</title>
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles/main.css">
-  <script src="data/posts.js"></script>
+  <script>
+    (function() {
+      var theme = localStorage.getItem('theme') ||
+        (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      document.documentElement.setAttribute('data-theme', theme);
+    })();
+  </script>
 </head>
 <body>
-
-  <div id="header-placeholder"></div>
-
-  <main>
-    <!-- Hero -->
-    <section class="hero">
-      <!-- Floating Stickers (Microsoft Fluent 3D Emoji) -->
-      <div class="sticker sticker--sun"><img src="assets/images/sticker-sun.png" alt="" aria-hidden="true"></div>
-      <div class="sticker sticker--star"><img src="assets/images/sticker-star.png" alt="" aria-hidden="true"></div>
-      <div class="sticker sticker--memo"><img src="assets/images/sticker-memo.png" alt="" aria-hidden="true"></div>
-      <div class="sticker sticker--coffee"><img src="assets/images/sticker-coffee.png" alt="" aria-hidden="true"></div>
-
-      <div class="container container--wide">
-        <h1>i write things down<br>so i <span class="highlight">don't forget.</span></h1>
-        <p class="hero-subtitle">essays, short notes, and everything in between</p>
-        <a href="#latest" class="hero-scroll">
-          scroll
-          <svg viewBox="0 0 24 24"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
-        </a>
-      </div>
-    </section>
-
-    <!-- Latest Posts -->
-    <section class="section" id="latest">
-      <div class="container">
-        <div class="section-header">
-          <h2>latest posts</h2>
-          <a href="posts.html">View all &rarr;</a>
-        </div>
-        <div class="posts-grid" id="latest-posts"></div>
-      </div>
-    </section>
-  </main>
-
-  <div id="footer-placeholder"></div>
-
-  <script src="scripts/main.js"></script>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
 </body>
 </html>

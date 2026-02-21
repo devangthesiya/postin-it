@@ -1,10 +1,4 @@
-/**
- * Bookmarks Data
- * ---------------
- * Categorized links you want to share.
- * Group them by category for organized display.
- */
-const BOOKMARKS = [
+export const BOOKMARKS = [
   {
     category: "Reads",
     items: [

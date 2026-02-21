@@ -1,0 +1,13 @@
+node_modules
+package-lock.json
+dist
+
+# Editor / OS
+.DS_Store
+*.local
+.vscode
+.idea
+
+# Env files
+.env
+.env.*
