@@ -6,7 +6,7 @@ import App from './App';
 import './main.css';
 
 // Replace G-XXXXXXXXXX with your real GA4 Measurement ID
-ReactGA.initialize('G-XXXXXXXXXX');
+ReactGA.initialize('G-QKMLV0NLZS');
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
