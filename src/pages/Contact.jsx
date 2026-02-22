@@ -1,4 +1,8 @@
+import useMeta from '../hooks/useMeta';
+
 export default function Contact() {
+  useMeta({ title: 'Contact', description: 'Get in touch — social links and email.' });
+
   return (
     <>
       <section className="page-header">
@@ -13,21 +17,21 @@ export default function Contact() {
           <div className="contact-grid">
             <a href="mailto:devangthesiya16@gmail.com" className="contact-card">
               <div className="contact-card-info">
-                <h3>Email</h3>
+                <h2>Email</h2>
                 <p>devangthesiya16@gmail.com</p>
               </div>
             </a>
 
             <a href="https://x.com/devangthesiya" target="_blank" rel="noopener noreferrer" className="contact-card">
               <div className="contact-card-info">
-                <h3>X (Twitter)</h3>
+                <h2>X (Twitter)</h2>
                 <p>@devangthesiya</p>
               </div>
             </a>
 
             <a href="https://www.linkedin.com/in/devang-thesiya/" target="_blank" rel="noopener noreferrer" className="contact-card">
               <div className="contact-card-info">
-                <h3>LinkedIn</h3>
+                <h2>LinkedIn</h2>
                 <p>/in/devang-thesiya</p>
               </div>
             </a>

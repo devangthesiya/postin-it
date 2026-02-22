@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { POSTS } from '../data/posts';
+import useMeta from '../hooks/useMeta';
 
 function formatDate(dateStr) {
   const date = new Date(dateStr + 'T00:00:00');
@@ -26,6 +27,8 @@ function PostCard({ post }) {
 }
 
 export default function Home() {
+  useMeta({ title: null, description: 'A personal space for essays, short notes, and everything in between.' });
+
   const latestPosts = [...POSTS]
     .sort((a, b) => new Date(b.date) - new Date(a.date))
     .slice(0, 3);

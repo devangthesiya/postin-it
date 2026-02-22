@@ -1,6 +1,9 @@
 import { Link } from 'react-router-dom';
+import useMeta from '../hooks/useMeta';
 
 export default function About() {
+  useMeta({ title: 'About', description: 'About Devang Thesiya — who I am and why Musing exists.' });
+
   return (
     <>
       <section className="page-header">

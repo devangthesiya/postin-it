@@ -1,6 +1,9 @@
 import { BOOKMARKS } from '../data/bookmarks';
+import useMeta from '../hooks/useMeta';
 
 export default function Bookmarks() {
+  useMeta({ title: 'Bookmarks', description: 'Curated links and resources worth sharing.' });
+
   return (
     <>
       <section className="page-header">

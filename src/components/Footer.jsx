@@ -10,6 +10,7 @@ export default function Footer() {
           <Link to="/about">About</Link>
           <Link to="/bookmarks">Bookmarks</Link>
           <Link to="/contact">Contact</Link>
+          <a href="/rss.xml" target="_blank" rel="noopener noreferrer">RSS</a>
         </div>
       </div>
     </footer>
