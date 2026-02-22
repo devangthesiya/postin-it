@@ -1237,10 +1237,11 @@ main {
 
 @media (max-width: 768px) {
   :root {
-    --text-hero: 3.25rem;
-    --text-5xl: 2.5rem;
-    --text-4xl: 2rem;
-    --text-3xl: 1.5rem;
+    --text-hero: 3.5rem;
+    --text-5xl: 2.75rem;
+    --text-4xl: 2.25rem;
+    --text-3xl: 1.75rem;
+    --space-5xl: 5rem;
   }
 
   .hamburger-wrapper {
@@ -1261,16 +1262,35 @@ main {
 
   .hero {
     min-height: auto;
-    padding: var(--space-3xl) 0;
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .hero h1 {
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-subtitle {
+    margin-bottom: var(--space-xl);
   }
 
   .sticker {
     display: none;
   }
 
+  .section {
+    padding: var(--space-xl) 0;
+  }
+
   .section-header {
     flex-direction: column;
     gap: var(--space-sm);
+    margin-bottom: var(--space-lg);
+    padding-bottom: var(--space-md);
+  }
+
+  .site-footer {
+    margin-top: var(--space-3xl);
+    padding: var(--space-xl) 0 var(--space-lg);
   }
 
   .site-footer .container {
@@ -1280,6 +1300,18 @@ main {
   .footer-links {
     flex-wrap: wrap;
     gap: var(--space-md);
+  }
+
+  .post-card {
+    padding: var(--space-lg) 0;
+  }
+
+  .post-article {
+    padding: var(--space-xl) 0 var(--space-2xl);
+  }
+
+  .post-article-header {
+    margin-bottom: var(--space-lg);
   }
 
   .post-article-body,
@@ -1292,21 +1324,30 @@ main {
     font-size: var(--text-xl);
   }
 
+  .post-article-body hr {
+    margin: var(--space-xl) 0;
+  }
+
   .about-content,
   .about-content p {
     font-size: var(--text-base);
   }
 
   .page-header {
-    padding: var(--space-2xl) 0 var(--space-lg);
+    padding: var(--space-xl) 0 var(--space-md);
+  }
+
+  .page-header h1 {
+    font-size: var(--text-4xl);
   }
 }
 
 @media (max-width: 480px) {
   :root {
-    --text-hero: 2.5rem;
-    --text-5xl: 2rem;
-    --text-4xl: 1.75rem;
+    --text-hero: 2.75rem;
+    --text-5xl: 2.25rem;
+    --text-4xl: 2rem;
+    --text-3xl: 1.5rem;
   }
 
   .container {
