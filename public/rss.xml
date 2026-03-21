@@ -8,6 +8,14 @@
     <atom:link href="https://postin-it.vercel.app/rss.xml" rel="self" type="application/rss+xml"/>
 
     <item>
+      <title>Go Touch Some Grass</title>
+      <link>https://postin-it.vercel.app/posts/go-touch-some-grass</link>
+      <guid>https://postin-it.vercel.app/posts/go-touch-some-grass</guid>
+      <pubDate>Sun, 22 Mar 2026 00:00:00 GMT</pubDate>
+      <description>A week without social media, and what your attention span doesn't want you to know.</description>
+    </item>
+
+    <item>
       <title>The Ride, the Road, the Chai</title>
       <link>https://postin-it.vercel.app/posts/the-ride-the-road-the-chai</link>
       <guid>https://postin-it.vercel.app/posts/the-ride-the-road-the-chai</guid>

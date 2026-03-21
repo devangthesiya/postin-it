@@ -121,10 +121,22 @@ function formatDate(dateStr) {
 function ShareButtons({ post }) {
   const [copied, setCopied] = useState(false);
 
+  function trackShare(method) {
+    ReactGA.event('share', {
+      method,
+      post_title: post.title,
+      post_slug: post.slug,
+      post_type: post.type,
+      post_tags: post.tags.join(', '),
+      content_url: `${window.location.origin}/posts/${post.slug}`,
+    });
+  }
+
   function copyLink() {
     const url = `${window.location.origin}/posts/${post.slug}`;
     navigator.clipboard.writeText(url).then(() => {
       setCopied(true);
+      trackShare('copy_link');
       setTimeout(() => setCopied(false), 2000);
     });
   }
@@ -132,6 +144,7 @@ function ShareButtons({ post }) {
   function shareOnX() {
     const url = `${window.location.origin}/posts/${post.slug}`;
     const text = `${post.title} — Musing`;
+    trackShare('share_x');
     window.open(
       `https://x.com/intent/tweet?url=${encodeURIComponent(url)}&text=${encodeURIComponent(text)}`,
       '_blank',
@@ -171,6 +184,7 @@ function RelatedPosts({ currentPost }) {
           <Link key={post.slug} className="post-card" to={`/posts/${post.slug}`}>
             <div className="post-card-meta">
               <span className="post-card-date">{formatDate(post.date)}</span>
+              <span className="post-card-time">{post.time}</span>
               <span className="post-card-reading-time">{post.readingTime} min</span>
               <span className="post-card-type">{post.type}</span>
             </div>
@@ -220,6 +234,8 @@ export default function Post() {
             <h1>{post.title}</h1>
             <div className="post-article-meta">
               <span>{post.displayDate}</span>
+              <span>&middot;</span>
+              <span>{post.time}</span>
               <span>&middot;</span>
               <span>{post.readingTime} min read</span>
               <span>&middot;</span>

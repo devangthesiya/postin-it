@@ -694,6 +694,13 @@ main {
   letter-spacing: 0.06em;
 }
 
+.post-card-time {
+  font-family: var(--font-heading);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+  letter-spacing: 0.04em;
+}
+
 .post-card-reading-time {
   font-family: var(--font-heading);
   font-size: var(--text-xs);

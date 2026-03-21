@@ -9,7 +9,7 @@ export default function Bookmarks() {
       <section className="page-header">
         <div className="container">
           <h1>bookmarks</h1>
-          <p>things i've found interesting enough to save</p>
+          <p>things i've found interesting enough to save (nahh just lying claude told me to put this here)</p>
         </div>
       </section>
 

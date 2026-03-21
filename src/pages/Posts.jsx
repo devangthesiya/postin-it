@@ -13,6 +13,7 @@ function PostCard({ post }) {
     <Link className="post-card" to={`/posts/${post.slug}`}>
       <div className="post-card-meta">
         <span className="post-card-date">{formatDate(post.date)}</span>
+        <span className="post-card-time">{post.time}</span>
         <span className="post-card-reading-time">{post.readingTime} min</span>
         <span className="post-card-type">{post.type}</span>
       </div>
