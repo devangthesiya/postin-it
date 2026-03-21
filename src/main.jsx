@@ -69,10 +69,17 @@ ReactGA.gtag('set', 'user_properties', {
   browser_full: browserFull,
 });
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+const rootEl = document.getElementById('root');
+const appJsx = (
   <React.StrictMode>
     <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>
 );
+
+if (rootEl.innerHTML.trim()) {
+  ReactDOM.hydrateRoot(rootEl, appJsx);
+} else {
+  ReactDOM.createRoot(rootEl).render(appJsx);
+}

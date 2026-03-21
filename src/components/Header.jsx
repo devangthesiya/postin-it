@@ -2,9 +2,12 @@ import { useState, useEffect, useRef } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 
 export default function Header() {
-  const [theme, setTheme] = useState(
-    () => document.documentElement.getAttribute('data-theme') || 'light'
-  );
+  const [theme, setTheme] = useState(() => {
+    if (typeof document !== 'undefined') {
+      return document.documentElement.getAttribute('data-theme') || 'light';
+    }
+    return 'light';
+  });
   const [menuOpen, setMenuOpen] = useState(false);
   const [clock, setClock] = useState('');
   const intervalRef = useRef(null);

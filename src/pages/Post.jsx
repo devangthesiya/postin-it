@@ -201,6 +201,12 @@ export default function Post() {
     title: post.title,
     description: post.description,
     type: 'article',
+    article: {
+      title: post.title,
+      date: post.date,
+      readingTime: post.readingTime,
+      tags: post.tags,
+    },
   } : {});
 
   if (!post) return <Navigate to="/posts" replace />;
