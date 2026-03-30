@@ -1,3 +1,4 @@
+import aTrekAndAThought from '../posts/a-trek-and-a-thought.md?raw';
 import goTouchGrass from '../posts/go-touch-some-grass.md?raw';
 import theRide from '../posts/the-ride-the-road-the-chai.md?raw';
 import heDisappeared from '../posts/he-disappeared-let-go.md?raw';
@@ -5,11 +6,23 @@ import welcomeToMusing from '../posts/welcome-to-musing.md?raw';
 
 export const POSTS = [
   {
+    title: "A Trek and a Thought",
+    slug: "a-trek-and-a-thought",
+    date: "2026-03-31",
+    displayDate: "March 31, 2026",
+    time: "12:41 AM",
+    description: "A sunrise trek in the rain — and the quiet space where someone should have been.",
+    tags: ["personal", "travel", "story"],
+    type: "essay",
+    readingTime: 3,
+    content: aTrekAndAThought,
+  },
+  {
     title: "Go Touch Some Grass",
     slug: "go-touch-some-grass",
-    date: "2026-03-22",
-    displayDate: "March 22, 2026",
-    time: "12:30 AM",
+    date: "2026-03-31",
+    displayDate: "March 31, 2026",
+    time: "12:00 AM",
     description: "A week without social media, and what your attention span doesn't want you to know.",
     tags: ["personal", "social-media", "reflection"],
     type: "short",
